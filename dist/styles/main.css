@@ -1,0 +1,487 @@
+.imagesAlbum {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.imagesAlbum .slider {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -ms-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.imagesAlbum .slider .arrow {
+  z-index: 5;
+  cursor: pointer;
+  width: 10%;
+  outline: medium none;
+}
+.imagesAlbum .slider .arrow.prev {
+  background-image: url("images/prev.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  margin-left: 1%;
+  transition: all 0.2s linear 0s;
+}
+.imagesAlbum .slider .arrow.next {
+  background-image: url("images/next.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  margin-right: 1%;
+}
+.imagesAlbum .slider .slideContainer {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.imagesAlbum .slider .slideContainer .slide {
+  max-width: 80%;
+  height: auto;
+  max-height: 90%;
+  transition: all 0.5s;
+}
+.imagesAlbum .slider .slideContainer div {
+  color: black;
+}
+.arrow.next,
+.arrow.prev {
+  opacity: 0.2;
+}
+.arrow.prev:hover {
+  opacity: 1;
+}
+.arrow.next:hover {
+  opacity: 1;
+}
+.nav {
+  left: 0;
+  margin: 0 auto;
+  padding: 0.1em 0 0.8em;
+  right: 0;
+  text-align: center;
+  z-index: 5;
+}
+.nav li {
+  border: 2px solid #6c6d71;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  height: auto;
+  margin: 0 0.1%;
+  position: relative;
+  width: 4%;
+}
+.nav li img {
+  width: 100%;
+}
+.nav li.active {
+  border: 5px solid green;
+}
+.slide.ng-hide-add {
+  opacity: 1;
+  -webkit-transition: 1s linear all;
+  -moz-transition: 1s linear all;
+  -o-transition: 1s linear all;
+  transition: 1s linear all;
+  -webkit-transform: rotateX(50deg) rotateY(30deg);
+  -moz-transform: rotateX(50deg) rotateY(30deg);
+  -ms-transform: rotateX(50deg) rotateY(30deg);
+  -o-transform: rotateX(50deg) rotateY(30deg);
+  transform: rotateX(50deg) rotateY(30deg);
+  -webkit-transform-origin: right top 0;
+  -moz-transform-origin: right top 0;
+  -ms-transform-origin: right top 0;
+  -o-transform-origin: right top 0;
+  transform-origin: right top 0;
+}
+.slide.ng-hide-add.ng-hide-add-active {
+  opacity: 0;
+}
+.slide.ng-hide-remove {
+  -webkit-transition: 1s linear all;
+  -moz-transition: 1s linear all;
+  -o-transition: 1s linear all;
+  transition: 1s linear all;
+  display: block!important;
+  opacity: 0;
+}
+.slide,
+.slide.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+}
+header,
+footer {
+  margin-left: 1%;
+  margin-right: 1%;
+  background-color: #6c6d71;
+  height: 5%;
+  min-height: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+header .primary-button,
+footer .primary-button {
+  padding: 3px;
+  margin: 0;
+  height: 100%;
+  width: 15%;
+  min-width: 80px;
+  border: none;
+  background-color: transparent;
+  font-family: FbSpoiler!important;
+  font-size: x-large;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  transition: all 0.5s;
+}
+header .primary-button:hover,
+footer .primary-button:hover {
+  cursor: pointer;
+  background-color: #bdd531;
+  color: #6c6d71;
+}
+header .primary-button.selected,
+footer .primary-button.selected {
+  background-color: #bdd531;
+}
+header.menuHeader {
+  border-bottom: #bdd531 5px solid;
+  padding: 3px 0 3px 0;
+  height: 4%;
+  min-height: 4%;
+}
+header.logoHeader {
+  background-color: #f8f9fb;
+  height: 8%;
+  min-height: 8%;
+  padding: 1% 0 0 0;
+  align-items: flex-end;
+}
+header.logoHeader #main_logo {
+  cursor: pointer;
+  height: 100%;
+  background-color: #f8f9fb;
+  background-image: url('images/logo.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  flex-grow: 1;
+  min-width: 25%;
+}
+header.logoHeader #main_logo:hover {
+  color: #6c6d71;
+}
+header.logoHeader .primary-link {
+  padding: 5px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+header.logoHeader .primary-link .fb_iframe_widget {
+  margin: 2px;
+}
+footer {
+  height: 8%;
+  min-height: 8%;
+  background: none;
+  border-top: 10px solid #bdd531;
+  font-size: large;
+}
+footer .table {
+  width: 100%;
+  height: 100%;
+  display: table;
+  background-color: #6c6d71;
+  font-size: small;
+}
+footer .table .tableCell {
+  display: table-cell;
+  text-align: center;
+  background-color: transparent;
+  width: 150px;
+  margin: 1px solid white;
+  border-top: 5px solid #6c6d71;
+  border-left: 1px solid white;
+}
+footer .table .tableCell.first .icon {
+  border-right: 1px solid #bdd531;
+}
+footer .table .icon {
+  background-color: white!important;
+  border-left: 1px solid #bdd531;
+  margin-left: -1px;
+  height: 60%;
+}
+footer .table .data {
+  padding-top: 3px;
+  height: 40%;
+  font-size: initial;
+}
+@font-face {
+    font-family: 'FbSpoiler';
+    src: url("fonts/FbSpoiler-Bold.otf") format("opentype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'FbSpoiler';
+    src: url("fonts/FbSpoiler-Light.otf") format("opentype");
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'FbSpoiler';
+    src: url("fonts/FbSpoiler-Regular.otf") format("opentype");
+    font-weight: normal;
+}
+       
+html,
+body {
+  background-color: #f8f9fb;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: FbSpoiler;
+  font-size: x-large;
+  font-weight: lighter;
+  color: white;
+}
+body a {
+  color: deepskyblue;
+}
+body #app {
+  height: 100%;
+  min-width: 650px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+}
+body #app section {
+  margin-left: 1%;
+  margin-right: 1%;
+  display: flex;
+  height: auto;
+  background: white;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: stretch;
+  transition: all 0.5s;
+}
+body .mainView {
+  flex-grow: 1;
+  background-color: white;
+  border: 3px solid #bdd531;
+  overflow-y: auto;
+}
+body .mainView p b,
+body .mainView div b {
+  color: #bdd531;
+}
+body .navigationLink {
+  font-size: xx-large;
+  color: #bdd531;
+}
+body #moneNetoDiv {
+  background-image: url('images/moneNeto_background.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+}
+body #homeDiv {
+  flex-grow: 1;
+  background-image: url('images/main_background1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: stretch;
+}
+body #contactDiv {
+  display: flex;
+  align-items: stretch;
+}
+body #contactDiv .table {
+  width: 100%;
+}
+body #moneNetoDiv,
+body #aboutDiv,
+body #productsDiv,
+body #contactDiv {
+  font-size: larger;
+}
+body #moneNetoDiv .floatingText,
+body #aboutDiv .floatingText,
+body #productsDiv .floatingText,
+body #contactDiv .floatingText {
+  align-items: flex-start;
+}
+body .floatingText {
+  margin: 2%;
+  padding: 2%;
+  background-color: rgba(0, 0, 0, 0.6);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+body .floatingText .fb_iframe_widget {
+  padding: 3px;
+  max-width: 100%;
+  display: block;
+  overflow: auto;
+}
+body .floatingText .mapContainer {
+  padding: 3px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+body .floatingText .mapContainer #map {
+  flex-grow: 1;
+}
+body .floatingText.horiz {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch!important;
+}
+body .floatingText.contactUs {
+  min-width: 20%;
+  max-width: 50%;
+}
+body #homeBackgroundImage {
+  width: 100%;
+}
+body contact-us {
+  width: 90%;
+}
+body form {
+  display: flex;
+  flex-direction: column;
+}
+body form .property {
+  display: flex;
+  flex-direction: column;
+}
+body button {
+  background-color: #6c6d71;
+  border: 1px solid white;
+  color: white;
+  outline: none;
+  transition: all 0.5s;
+  font-family: FbSpoiler;
+  font-size: large;
+}
+body button:hover {
+  cursor: pointer;
+  background-color: #bdd531;
+  color: #6c6d71;
+}
+.icon.cell {
+  background: url('images/cell.svg') no-repeat center center;
+  background-size: contain;
+}
+.icon.phone {
+  background: url('images/phone.svg') no-repeat center center;
+  background-size: contain;
+}
+.icon.fax {
+  background: url('images/fax.svg') no-repeat center center;
+  background-size: contain;
+}
+.icon.address {
+  background: url('images/address.svg') no-repeat center center;
+  background-size: contain;
+}
+.icon.email {
+  background: url('images/email.svg') no-repeat center center;
+  background-size: contain;
+}
+.icon.facebook {
+  background: url('images/facebook.svg') no-repeat center center;
+  background-size: contain;
+}
+.table {
+  display: table;
+}
+.table .tableRow {
+  display: table-row;
+}
+.table .tableRow div {
+  display: table-cell;
+  padding: 1%;
+  min-width: 1em;
+  text-overflow: ellipsis;
+}
+.table .tableRow .icon {
+  background-size: 30%;
+}
+.table.results {
+  border: 3px solid #f8f9fb;
+  width: 90%;
+}
+button.accordion {
+  border: none;
+  cursor: pointer;
+  padding: 1% 3% 0 1%;
+  transition: 0.4s;
+  margin-right: 10%;
+  font-size: x-large;
+  border-bottom-left-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+  background-image: url('images/expand.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+button.accordion.active {
+  background-color: #bdd531;
+  text-decoration: none;
+  background-image: url('images/collapse.png');
+}
+div.panel {
+  margin-right: 8%;
+  width: 50%;
+  border-radius: 0.3em;
+  padding: 0 18px;
+  background-color: rgba(0, 0, 0, 0.6);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.calculator button {
+  font-size: xx-large;
+}
+.calculator p,
+.calculator a {
+  font-size: small;
+}
+.calculator input {
+  font-size: medium;
+}

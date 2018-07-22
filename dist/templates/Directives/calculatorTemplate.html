@@ -1,0 +1,30 @@
+<div class="calculator">
+     <div class="table">
+            <div class="tableRow">
+                <div><b>צריכת חשמל שנתית</b></div>
+                <input type="number" ng-model="yearCunsumeInNis" step="200"></input>
+                <div>ש"ח</div>
+            </div>
+        </div>
+
+        <div>
+            <button ng-click="calc()">חשב!</button>
+        </div>
+        <br>
+        <div class="table results">
+            <div class="tableRow">
+                <div><b>גודל מערכת מומלץ</b></div>
+                <div>{{systemSizeInKVat}} קוט"ש</div>
+            </div>
+            <div class="tableRow">
+                <div><b>גודל גג מתאים</b></div>
+                <div>{{systemSizeInMM}} מ"ר</div>
+            </div>
+        </div>
+
+        <p>המחשבון הנ"ל נבנה ע"י אנשי המקצוע של חברת ירוק פרויקטים ולא ע"י כלכלנים</br>		
+        המחשבון לא יהווה תחליף לייעוץ עם אנשי המקצוע של חברת ירוק פרויקטים</br>			
+        המחשבון משתמש ב"כללי אצבע" ומשמש לצורכי קבלת מושג כללי</br>	
+        עוד מידע ותמחור פרויקט ייעשו לאחר סקירת האתר ע"י <a class="navigationLink" href="#/contact">נציג חברת ירוק פרויקטים</a></br>
+        </p>
+</div>
