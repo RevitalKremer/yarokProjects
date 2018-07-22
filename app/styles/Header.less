@@ -1,0 +1,170 @@
+header, footer
+{
+    margin-left: 1%;
+    margin-right: 1%;
+    background-color: @logo_gray;
+    height: 5%;
+    min-height: 5%;
+    display: flex;
+    flex-direction: row;
+    //flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    
+    .primary-button 
+    {
+        padding:3px;
+        margin:0;
+        height:100%;
+        width: 15%;
+        min-width: 80px;
+        border: none;
+        background-color:transparent;
+        font-family: FbSpoiler!important;
+        font-size: x-large;
+        font-weight: bold;
+        text-align: center;
+
+        //background-color: @logo_green;
+        color: white;
+        transition: all 0.5s;
+
+        &:hover
+        {
+        cursor: pointer;
+        background-color: @logo_green;
+        color: @logo_gray; 
+        }
+        
+
+        // &:hover
+        // {
+        //   background-color: @logo_green;
+        //   color: @logo_gray; 
+        // }
+
+    }
+
+    .primary-button.selected
+    {
+        background-color: @logo_green;
+    }
+
+    
+}
+header.menuHeader
+{
+    border-bottom: @logo_green 5px solid;
+    padding: 3px 0 3px 0;
+    height: 4%;
+    min-height: 4%;
+}
+header.logoHeader
+{
+    background-color: @logo_bg;
+    height: 8%;
+    min-height: 8%;
+    padding: 1% 0 0 0;
+    align-items: flex-end;
+    
+    
+    #main_logo
+    {
+        cursor: pointer;  
+        height: 100%;
+        background-color: @logo_bg;
+        
+        background-image: url('images/logo.jpg');
+        background-repeat: no-repeat;
+        background-size:contain;
+        background-position: center;
+        flex-grow: 1;
+        min-width: 25%;
+
+        &:hover
+        {
+            //background-color: @logo_bg;
+            color: @logo_gray; 
+        }
+
+    }
+    .primary-link
+    {
+        padding: 5px;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+
+        .fb_iframe_widget
+        {
+            margin: 2px;
+        }
+    }
+}
+footer
+{
+    height: 8%;
+    min-height: 8%;
+    
+    background: none;
+    border-top: 10px solid @logo_green;
+    font-size: large;
+    .table
+    {
+    width: 100%;
+    height: 100%;
+    display: table;
+    // padding-top: 5px;
+    // padding-bottom: 3px;
+    // align-items: stretch;
+    background-color: @logo_gray;
+    //display: flex;
+    //flex-direction: row;
+    //justify-content: flex-start;
+    //align-items: center;
+
+    font-size: small;
+    
+
+    .tableCell
+    {
+        display: table-cell;
+        text-align: center;
+        background-color: transparent;
+        width: 150px;
+        margin: 1px solid white;
+        border-top: 5px solid @logo_gray;
+        border-left: 1px solid white;
+    }
+
+    .tableCell.first
+    {
+        .icon
+        {
+        border-right: 1px solid @logo_green;
+        }
+
+    }
+
+    .icon
+    {
+        background-color: white!important;
+        border-left: 1px solid @logo_green;
+        margin-left: -1px;
+        height: 60%;
+    }
+    .data
+    {
+        padding-top: 3px;
+        height:40%;
+        font-size: initial;
+    }
+    // .data.email
+    // {
+    //   font-size: smaller;
+    // }
+                
+    }
+}
+
+

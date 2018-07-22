@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'FbSpoiler';
+    src: url("fonts/FbSpoiler-Bold.otf") format("opentype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'FbSpoiler';
+    src: url("fonts/FbSpoiler-Light.otf") format("opentype");
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'FbSpoiler';
+    src: url("fonts/FbSpoiler-Regular.otf") format("opentype");
+    font-weight: normal;
+}
+       

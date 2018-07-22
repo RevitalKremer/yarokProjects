@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="he">
+    <meta charset="UTF-8">    
+    <meta name="keywords" content="solar, מונה נטו, מערכות סולאריות, חשבון חשמל, ירוק פרוייקטים">
+    <title>ירוק פרויקטים - מערכות סולאריות</title>
+    
+<link rel="stylesheet" href="styles/main.css">
+</head>
+<body dir="rtl">
+    <div id="fb-root"></div>
+    <script src="scripts/lib/jquery/dist/jquery.js"></script>
+    <script src="scripts/lib/underscore/underscore.js"></script>
+    <script src="scripts/lib/angular/angular.js"></script>
+    <script src="scripts/lib/angular-route/angular-route.js"></script>
+    <script src="scripts/lib/angular-cookies/angular-cookies.js"></script>
+    <script src="scripts/lib/angular-messages/angular-messages.js"></script>
+    <script src="scripts/lib/angular-bind-notifier/dist/angular-bind-notifier.js"></script>
+    <script src="scripts/Utils/bluebird.min.js"></script>
+    <script src="scripts/Utils/polyfills.js"></script>
+    <script type="module" src="scripts/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd6CocxTwdOIDjEwRD7w2zhoflvgTyUlM" type="text/javascript"></script>
+
+    
+    <script src="main.min.js"></script>
+    <!--<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdfCwiJbIJnhuIvrZ-kIu4xyaQ0kLFDic">
+    </script>-->
+
+    <div id="app" ng-app="main" ng-controller="appController as ctrl">
+        <header class="logoHeader">
+            <a class="primary-button" id="main_logo" href="#/"></a>
+            <div class="primary-link">
+                <div class="fb-share-button" data-href="http://www.yarokprojects.co.il" data-layout="button" data-size="large" data-mobile-iframe="true">
+                    <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.yarokprojects.co.il%2F&amp;src=sdkpreparse">Share</a>
+                </div>
+                </div>
+                <div class="primary-link">
+                <div class="fb-follow" data-href="https://www.facebook.com/OrenOmerKremer" data-layout="button" data-size="large" data-show-faces="false"></div>
+            </div>
+        </header>
+        
+        <header class="menuHeader">
+            <!--<img id="main_logo" onclick="window.location.href='#/'" src="styles/images/logo.jpg"></img>-->
+            
+            <a class="primary-button" id="home" onclick="window.location.href='#/home'">ראשי</a>
+            <a class="primary-button" id="projects" onclick="window.location.href='#/projects'">פרויקטים</a>
+            <a class="primary-button" id="about" onclick="window.location.href='#/about'">אודות</a>
+            <a class="primary-button" id="moneNeto" onclick="window.location.href='#/moneNeto'">מונה נטו ביתי</a>
+            <a class="primary-button" id="products" onclick="window.location.href='#/products'">שירותים ומוצרים</a>
+            <a class="primary-button" id="contact" onclick="window.location.href='#/contact'">צור קשר</a>
+            
+        </header>       
+        <section class="view" ng-view="">
+        </section>
+        <footer>
+            <div class="table">
+                <div class="tableCell first">
+                    <div class="icon cell"></div>
+                    <div class="data cell">054-8188370 / 054-5440960</div>
+                </div>
+                <div class="tableCell">
+                    <div class="icon phone"></div>
+                    <div class="data phone">04-6760600</div>
+                </div>
+                <div class="tableCell">
+                    <div class="icon fax"></div>
+                    <div class="data fax">04-6760100</div>
+                </div>
+                <div class="tableCell">
+                    <div class="icon email"></div>
+                    <div class="data email">sales@yarokprojects.co.il</div>
+                </div>
+                <div class="tableCell">
+                    <div class="icon address"></div>
+                    <div class="data address">יבנאל, ת.ד 527</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

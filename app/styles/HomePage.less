@@ -1,0 +1,41 @@
+#homeMiddleDiv
+{
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  #workAreaSplitter
+  {
+  border: 1px solid @kendo_border;
+  }
+  #workAreaToolbar
+  {
+    border: none;
+    background-color: @kendo_background;
+    .panesViewButton1
+    {
+      background-image: url('images/1pane.png');
+      background-repeat: no-repeat;
+      background-position: 0% center;
+      background-size: 95%;
+    }
+    .panesViewButton2
+    {
+      background-image: url('images/2panes.png');
+      background-repeat: no-repeat;
+      background-position: 0% center;
+      background-size: 95%;
+    }
+    .panesViewButton3
+    {
+      background-image: url('images/3panes.png');
+      background-repeat: no-repeat;
+      background-position: 0% center;
+      background-size: 95%;
+    }
+  }
+}
+
+.k-splitter {
+  flex-grow: 1;
+}
+
